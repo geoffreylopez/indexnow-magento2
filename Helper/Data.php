@@ -11,12 +11,9 @@ class Data extends AbstractHelper
     const XML_PATH_ENDPOINT_URL = 'webatypique_indexnow_general/general/endpoint_url';
 
     /**
-     * Vérifie si le module est activé.
-     *
-     * @param int|null $storeId
-     * @return bool
+     * Vérifie si le module est activé
      */
-    public function isEnabled($storeId = null): bool
+    public function isEnabled(?int $storeId = null): bool
     {
         return (bool)$this->scopeConfig->getValue(
             self::XML_PATH_ENABLED,
@@ -26,12 +23,9 @@ class Data extends AbstractHelper
     }
 
     /**
-     * Récupère l'API Key IndexNow.
-     *
-     * @param int|null $storeId
-     * @return string|null
+     * Récupère l'API Key IndexNow
      */
-    public function getApiKey($storeId = null): ?string
+    public function getApiKey(?int $storeId = null): ?string
     {
         return $this->scopeConfig->getValue(
             self::XML_PATH_API_KEY,
@@ -42,11 +36,8 @@ class Data extends AbstractHelper
 
     /**
      * Récupère l'URL de l'endpoint IndexNow.
-     *
-     * @param int|null $storeId
-     * @return string|null
      */
-    public function getEndpointUrl($storeId = null): ?string
+    public function getEndpointUrl(?int $storeId = null): ?string
     {
         return $this->scopeConfig->getValue(
             self::XML_PATH_ENDPOINT_URL,
