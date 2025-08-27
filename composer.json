@@ -1,7 +1,7 @@
 {
   "name": "webatypique/module-index-now-magento2",
   "version": "1.0.0",
-  "description": "N/A",
+  "description": "This module allows you to integrate the IndexNow protocol into your Magento 2 website, enabling faster indexing of your content by search engines that support this protocol.",
   "type": "magento2-module",
   "require": {
     "magento/framework": "*"
