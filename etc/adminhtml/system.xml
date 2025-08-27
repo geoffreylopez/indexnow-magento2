@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+
+    <!-- Onglet principal -->
+    <system>
+        <tab id="webatypique_indexnow" translate="label" sortOrder="900">
+            <label>WebAtypique IndexNow</label>
+        </tab>
+
+        <!-- Section générale -->
+        <section id="webatypique_indexnow_general"
+                 translate="label"
+                 sortOrder="10"
+                 showInDefault="1"
+                 showInWebsite="1"
+                 showInStore="1">
+            <label>General</label>
+            <tab>webatypique_indexnow</tab>
+            <resource>WebAtypique_IndexNow::config</resource>
+
+            <!-- Groupe General -->
+            <group id="general"
+                   translate="label"
+                   sortOrder="10"
+                   showInDefault="1"
+                   showInWebsite="1"
+                   showInStore="1">
+                <label>General</label>
+
+                <!-- Activation -->
+                <field id="enabled"
+                       translate="label comment"
+                       type="select"
+                       sortOrder="10"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Enable IndexNow</label>
+                    <comment>Enable or disable IndexNow integration.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <!-- API Key -->
+                <field id="api_key"
+                       translate="label comment"
+                       type="text"
+                       sortOrder="20"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>API Key</label>
+                    <comment>Enter the API key generated for IndexNow.</comment>
+                </field>
+
+                <!-- Endpoint URL -->
+                <field id="endpoint_url"
+                       translate="label comment"
+                       type="text"
+                       sortOrder="30"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Endpoint URL</label>
+                    <comment>Enter the endpoint URL (default: https://api.indexnow.org/indexnow).</comment>
+                    <frontend_class>validate-url</frontend_class>
+                </field>
+
+            </group>
+        </section>
+    </system>
+</config>
