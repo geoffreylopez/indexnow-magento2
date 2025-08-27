@@ -9,6 +9,8 @@ class Data extends AbstractHelper
     const XML_PATH_ENABLED      = 'webatypique_indexnow_general/general/enabled';
     const XML_PATH_API_KEY      = 'webatypique_indexnow_general/general/api_key';
     const XML_PATH_ENDPOINT_URL = 'webatypique_indexnow_general/general/endpoint_url';
+    const XML_PATH_KEY_LOCATION = 'webatypique_indexnow_general/general/key_location';
+
 
     /**
      * Vérifie si le module est activé
@@ -29,6 +31,18 @@ class Data extends AbstractHelper
     {
         return $this->scopeConfig->getValue(
             self::XML_PATH_API_KEY,
+            ScopeInterface::SCOPE_STORE,
+            $storeId
+        );
+    }
+
+    /**
+     * Récupère l'emplacement de la clé (key location)
+     */
+    public function getKeyLocation(?int $storeId = null): ?string
+    {
+        return $this->scopeConfig->getValue(
+            self::XML_PATH_KEY_LOCATION,
             ScopeInterface::SCOPE_STORE,
             $storeId
         );

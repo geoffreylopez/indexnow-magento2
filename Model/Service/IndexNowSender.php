@@ -30,11 +30,17 @@ class IndexNowSender
             return false;
         }
 
+        // Prépare le payload avec keyLocation si défini
         $payload = [
             'host' => parse_url($url, PHP_URL_HOST),
             'key' => $apiKey,
             'urlList' => [$url]
         ];
+
+        $keyLocation = $this->configHelper->getKeyLocation();
+        if (!empty($keyLocation)) {
+            $payload['keyLocation'] = $keyLocation;
+        }
 
         try {
             $this->curl->addHeader("Content-Type", "application/json");

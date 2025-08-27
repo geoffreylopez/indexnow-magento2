@@ -53,11 +53,23 @@
                     <comment>Enter the API key generated for IndexNow.</comment>
                 </field>
 
+                <field id="key_location"
+                       translate="label comment"
+                       type="text"
+                       sortOrder="30"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Key Location (optional)</label>
+                    <comment>URL du fichier de clé (si non hébergé à la racine)</comment>
+                    <frontend_class>validate-url</frontend_class>
+                </field>
+
                 <!-- Endpoint URL -->
                 <field id="endpoint_url"
                        translate="label comment"
                        type="text"
-                       sortOrder="30"
+                       sortOrder="40"
                        showInDefault="1"
                        showInWebsite="1"
                        showInStore="1">
