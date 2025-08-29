@@ -7,7 +7,12 @@
     </event>
 
     <event name="catalog_category_save_after">
-        <observer name="webatypique_indexnow_product_save"
+        <observer name="webatypique_indexnow_category_save"
                   instance="WebAtypique\IndexNow\Observer\CategorySaveAfter"/>
+    </event>
+
+    <event name="cms_page_save_after">
+        <observer name="webatypique_indexnow_page_save"
+                  instance="WebAtypique\IndexNow\Observer\CmsPageSaveAfter"/>
     </event>
 </config>
