@@ -5,4 +5,9 @@
         <observer name="webatypique_indexnow_product_save"
                   instance="WebAtypique\IndexNow\Observer\ProductSaveAfter"/>
     </event>
+
+    <event name="catalog_category_save_after">
+        <observer name="webatypique_indexnow_product_save"
+                  instance="WebAtypique\IndexNow\Observer\CategorySaveAfter"/>
+    </event>
 </config>
