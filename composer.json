@@ -4,10 +4,10 @@
   "description": "This module allows you to integrate the IndexNow protocol into your Magento 2 website, enabling faster indexing of your content by search engines that support this protocol.",
   "type": "magento2-module",
   "require": {
-    "magento/framework": "*"
+    "php": "^8.0"
   },
   "license": [
-    "Proprietary"
+    "proprietary"
   ],
   "authors": [
     {
